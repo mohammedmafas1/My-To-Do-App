@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My-to-do-app</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="./node_modules/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- todo app container  -->
+    <section class="todoapp">
+        <div class="wrapper">
+            <!-- todo header section  -->
+            <header class="todo-header">
+                <nav>
+                    <div class="todoapp-name">
+                        <h2>todo app</h2>
+                        <span class="bx bxs-pencil"></span>
+                    </div>
+                    <!-- theme set  -->
+                    <div class="theme">
+                        <button class="theme-btn" id="themeBtn">
+                            <span class="bx bxs-moon"></span>
+                        </button>
+                    </div>
+                </nav>
+                <div class="todo-content">
+                    <h2>Hey there</h2>
+                    <p>organize your plans for the day</p>
+                </div>
+            </header>
+            <!-- todo main body  -->
+            <main class="todo-body">
+                <!-- search box  -->
+                <section class="search-box">
+                    <input 
+                        type="text" 
+                        class="search-input-box" 
+                        id="searchInputBox" 
+                        placeholder="search your task here"
+                        autofocus
+                    />
+                    <span class="bx bx-search"></span>
+                </section>
+                <!-- task list container  -->
+                <section class="tasks-container">
+                    <ul class="task-list"></ul>
+                </section>
+                <!-- add task box  -->
+                <section class="add-task-box">
+                    <button class="add-task-btn" id="addTaskBtn">
+                        <span class="bx bx-plus"></span>
+                        Add a new task
+                    </button>
+                </section>
+            </main>
+        </div>
+    </section>
+    <!-- add task panel  -->
+    <section class="add-task-panel">
+        <div class="add-task-panel-content">
+            <div class="panel-content-box">
+                <h2>Hey there</h2>
+                <p>add your plans for the day here</p>
+            </div>
+            <span class="bx bx-x close-panel"></span>
+        </div>
+        <div class="add-task-input-box">
+            <div class="input-field">
+                <label for="">Task Name</label>
+                <input type="text" class="add-task-input" id="addTaskInputBox" placeholder="Create a new task here" autofocus/>
+            </div>
+            <div class="time-box-wrapper">
+                <div class="input-field time-box">
+                    <label for="">Start time</label>
+                    <input type="time" id="startTime" value="" />
+                </div>
+                <div class="input-field time-box">
+                    <label for="">End time</label>
+                    <input type="time" id="endTime" />
+                </div>
+            </div>
+            <button class="create-task-btn" id="createTaskBtn">Create task</button>
+        </div>
+    </section>
+    <!-- overlay  -->
+    <div class="overlay"></div>
+    <script src="./src/js/main.js" type="/module" defer></script>
+    <script src="./src/js/script.js" type="text/javascript" defer></script>
+</body>
+</html>
