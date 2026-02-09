@@ -1,0 +1,18 @@
+$queries: (
+    "mobile" : 480px,
+    "tablet" : 768px,
+    "laptop" : 992px,
+    "desktop" : 1200px,
+);
+
+// Responsive breakpoints mixin 
+@mixin respond($query){
+    @if map-has-key($queries , $query ){
+        @media (max-width : map-get($queries, $query)) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unknown breakpoint : #{$query}";
+    }
+}

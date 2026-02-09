@@ -1,4 +1,5 @@
 @import "~boxicons/css/boxicons.min.css";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
@@ -65,6 +66,15 @@ body.dark-theme{
     background-color: var(--bg2-color);
     box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2);
     transition: 0.4s ease;
+
+    @include respond(tablet){
+        width: 90%;
+        padding: 2rem 2rem 3rem;
+    }
+
+    @include respond(mobile){
+        padding: 1.5rem 1.5rem 2rem;
+    }
 }
 
 .todoapp.hidetodoapp{
@@ -78,11 +88,14 @@ body.dark-theme{
     margin-bottom: 3rem;
     flex-direction: column;
     gap: 2.5rem;
+
+    @include respond(mobile){
+        gap: 1.5rem;
+    }
 }
 
 .todoapp .todo-header nav{
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -201,6 +214,11 @@ body.dark-theme{
     padding: 1rem 1rem 1rem 0;
     max-height: 25rem;
     overflow-x: hidden;
+
+    @include respond(mobile){
+        max-height: 25rem;
+        // padding: 1rem 1rem 1rem 0;
+    }
 }
 
 .tasks-container::-webkit-scrollbar{
@@ -350,6 +368,10 @@ body.dark-theme{
     background-color: var(--bg-color);
     box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2);
     cursor: pointer;
+
+    @include respond(mobile){
+        font-size: 1.4rem;
+    }
 }
 
 .add-task-panel button:hover,
@@ -386,6 +408,15 @@ body.dark-theme{
     transition: opacity 0.4s ease;
     box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2);
     z-index: 999;
+
+    @include respond(tablet){
+        width: 90%;
+        padding: 2rem 2rem 3rem;
+    }
+
+    @include respond(mobile){
+        padding: 1.5rem 1.5rem 2rem;
+    }
 }
 
 .add-task-panel.active{
